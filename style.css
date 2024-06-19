@@ -4,7 +4,6 @@
          url('fonts/norse-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 * {
@@ -18,25 +17,72 @@ body {
     flex-direction: row-reverse;
 }
 
+/* Right side of screen - sign up form */
 .main {
     display: flex;
     flex-direction: column;
     width: 66.6%;
-    --main-bg-color: rgb(209, 207, 207);
+    --main-bg-color: rgb(248, 244, 244);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .information,
 .button {
+    display: flex;
+    flex-direction: column;
     background-color: var(--main-bg-color);
     min-height: 35vh;
+    padding: 20px 40px;
+}
 
+.information {
+    justify-content: flex-end;
+}
+
+.main p:not(#question) {
+    max-inline-size: 55ch;
+    font-size: calc(11px + 1vw);
+    font-weight: bold;
+}
+
+.information p:last-of-type {
+    padding: 40px 0;
 }
 
 .input_fields {
     background-color: white;
     min-height: 30vh;
+    padding: 20px 40px;
+    margin-bottom: 5px;
+    box-shadow: 0 8px 8px -4px rgba(16, 15, 15, 0.2);
 }
 
+ul {
+    list-style: none;
+}
+
+button {
+    background-color: #596D48;
+    color: white;
+    width: fit-content;
+    padding: 10px 40px;
+    border-radius: 6px;
+    border-style: none;
+    font-weight: bold;
+    margin-bottom: 30px;
+    cursor: pointer;
+    box-shadow: 5px 8px 4px -4px rgb(128 128 128 /0.5);
+}
+
+.button a {
+   text-decoration: none;
+   color: #596D48;
+   font-weight: bold;
+}
+
+
+
+/* Left side of screen with image background */
 .image_sidebar {
     display: flex;
     flex-direction: column;
